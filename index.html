@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Snake Game</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <section>
+        <div class="game">
+
+            <div class="game-div active">
+                <div class="game-text">
+                    <h1>Snake Game</h1>
+                </div>
+
+                <div class="game-options">
+                    <div class="theme-title">
+                        <h3>Selecione o tema</h3>
+                    </div>
+                    <div class="theme-options">
+                        <div class="blue theme">Blue</div>
+                        <div class="red theme">Red</div>
+                        <div class="green theme">Green</div>
+                    </div>
+                    <div class="start">
+                        <br>
+                        Pressione a tecla de Espaço para iniciar o jogo
+                    </div>
+                </div>
+            </div>
+
+            <div class="canvas-div disabled">
+                <canvas id="snake" width="512" height="512"></canvas>
+            </div>
+            
+        </div>
+    </section>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>

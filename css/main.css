@@ -1,0 +1,112 @@
+:root {
+    --blue-light: #099dff;
+    --blue-dark: #1d21fd;
+    --bg-blue: #099dff6b;
+    --red-light: #ffe925;
+    --red-dark: #e02626;
+    --bg-red: #e0262686;
+    --green-light: #52ff01;
+    --green-dark: #0e7505;
+    --bg-green: #51ff016c;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.disabled {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+div.game {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 95vh;
+    width: 100%;
+}
+
+div.game-div {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+canvas {
+    border-radius: 10px;
+}
+
+div.game-text {
+    width: 100%;
+    text-align: center;
+}
+
+div.game-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.theme-options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+div.theme {
+    border: 1px black solid;
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+div.blue {
+    background-color: var(--blue-light);
+    color: var(--blue-dark);
+}
+
+div.blue:hover {
+    background-color: var(--blue-dark);
+    color: var(--blue-light);
+}
+
+div.red {
+    background-color: var(--red-dark);
+    color: var(--red-light);
+}
+
+div.red:hover {
+    background-color: var(--red-light);
+    color: var(--red-dark);
+}
+
+div.green {
+    background-color: var(--green-light);
+    color: var(--green-dark);
+}
+
+div.green:hover {
+    background-color: var(--green-dark);
+    color: var(--green-light);
+}
