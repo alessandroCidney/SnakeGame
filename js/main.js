@@ -1,10 +1,21 @@
 const canvas = document.querySelector("canvas#snake");
 const canvasDiv = document.querySelector(".canvas-div");
+
+// Detecta a tecla pressionada
 document.addEventListener("keydown", play);
+
 const body = document.querySelector("body");
+
+// Variáveis relacionadas à pontuação
+const score = document.querySelector(".score");
+const scoreDiv = document.querySelector(".score-div");
+const recordDiv = document.querySelector(".record");
+let record = 0;
 
 let start = document.querySelector(".start");
 const options = document.querySelector(".game-div");
+
+// Cores padrão
 let bgColor = "#52ff01";
 let snColor = "#0e7505";
 let fdColor = "#ffffff";
@@ -13,6 +24,7 @@ const blueTheme = document.querySelector(".blue");
 const redTheme = document.querySelector(".red");
 const greenTheme = document.querySelector(".green");
 
+// Mecanismo de mudança de tema
 blueTheme.addEventListener("click", () => {
     bgColor = "#099dff";
     snColor = "#1d21fd";
@@ -31,15 +43,31 @@ greenTheme.addEventListener("click", ()=>{
     body.style.backgroundColor = "#51ff016c";
 })
 
+// O mecanismo de active evita que o usuário cause erros pressionando a
+// barra de espaço
+
 var active = false;
 
 function play(event) {
 
+    // Mecanismo para iniciar com a tecla de espaço
     if(event.keyCode == 32 && active == false) {
+        let points = 0;
+        score.innerHTML = "SCORE: " + points;
+        
         active = true;
+
+        // Removendo menu de opções
+
         options.classList.add("disabled");
         options.classList.remove("active");
 
+        // Adicionando div com pontuação e recorde
+
+        scoreDiv.classList.remove("disabled");
+        scoreDiv.classList.add("active");
+
+        // Mostra o canvas
         canvasDiv.classList.remove("disabled");
 
         let context = canvas.getContext("2d");
@@ -92,7 +120,7 @@ function play(event) {
 
         function iniciarJogo() {
         
-            // Para impedir bugs nas bordas da tela
+            // Para impedir bugs nas bordas da tela, o código foi alterado nesta parte
         
             /*
             if(snake[0].x > 15*box && direction == "right") snake[0].x = 0;
@@ -115,6 +143,12 @@ function play(event) {
                     options.classList.add("active");
                     canvasDiv.classList.add("disabled");
                     active = false;
+
+                    if(points>record) {
+                        record = points;
+                        recordDiv.innerHTML = "BEST SCORE: " + record;
+                    }
+
                 }
             }
         
@@ -137,6 +171,8 @@ function play(event) {
             } else {
                 food.x = Math.floor(Math.random() * 15 + 1) * box;
                 food.y = Math.floor(Math.random() * 15 + 1) * box;
+                points += 50;
+                score.innerHTML = "SCORE: " + points;
             }
         
             let newHead = {
