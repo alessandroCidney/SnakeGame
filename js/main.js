@@ -21,7 +21,7 @@ let snColor = "#0e7505";
 let fdColor = "#ffffff";
 
 const blueTheme = document.querySelector(".blue");
-const redTheme = document.querySelector(".red");
+const purpleTheme = document.querySelector(".purple");
 const greenTheme = document.querySelector(".green");
 
 // Mecanismo de mudança de tema
@@ -31,10 +31,10 @@ blueTheme.addEventListener("click", () => {
     body.style.backgroundColor = "#099dff6b";
 })
 
-redTheme.addEventListener("click", ()=>{
-    bgColor="#e02626";
-    snColor = "#ffe925";
-    body.style.backgroundColor = "#e0262686";
+purpleTheme.addEventListener("click", ()=>{
+    bgColor="#0f0326";
+    snColor = "#ac7ff3";
+    body.style.backgroundColor = "#ac7ff3";
 })
 
 greenTheme.addEventListener("click", ()=>{

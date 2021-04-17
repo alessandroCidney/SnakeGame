@@ -104,14 +104,14 @@ div.blue:hover {
     color: var(--blue-light);
 }
 
-div.red {
-    background-color: var(--red-dark);
-    color: var(--red-light);
+div.purple {
+    background-color: #0f0326;
+    color: #ac7ff3;
 }
 
-div.red:hover {
-    background-color: var(--red-light);
-    color: var(--red-dark);
+div.purple:hover {
+    background-color: #ac7ff3;
+    color: #0f0326;
 }
 
 div.green {
