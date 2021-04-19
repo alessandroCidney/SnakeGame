@@ -10,6 +10,18 @@
     --grape-bg: #8e32aa;    
     --grape-sn: #e100ff;    
     --grape-bck: #8e32aa;    
+
+    --fire-bg: #ff0000;
+    --fire-sn: #a80000;
+    --fire-bck: #ff4040;
+
+    --rock-bg: #a32c2c;
+    --rock-sn: #bb3838;
+    --rock-bck: #611b1b;
+
+    --sun-bg: #ffae00;
+    --sun-sn: #ffe600;
+    --sun-bck: #ff5e00;
 }
 
 body {
@@ -80,28 +92,82 @@ a {
     border-radius: 10px;
     box-shadow: 0px 2px 5px black;
     transition: all .1s linear;
+    cursor: pointer;
 }
 
 .theme:hover {
     box-shadow: 0px 5px 7px black;
 }
 
-.theme p {
+.theme:hover .button-two {
     font-size: 17pt;
+}
+
+.theme p {
+    width: 100%;
+    padding-left: 30px;
+    font-size: 20pt;
     color: white;
 }
 
 .button-two {
     width: 70%;
-    height: 15%;
+    height: 10%;
     border: none;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
     font-size: 15pt;
     transition: all .1s linear;
     cursor: pointer;
+    font-weight: bolder;
+    color: white;
 }
 
-.button-two:hover {
-    font-size: 17pt;
-    font-weight: bolder;
+.sky {
+    background-color: var(--sky-bg);
+    color: white;
+}
+
+.sky:hover {
+    background-color: var(--sky-sn);
+}
+
+.tree {
+    background-color: var(--tree-sn);
+}
+
+.tree:hover {
+    background-color: var(--tree-bck);
+}
+
+.grape {
+    background-color: var(--grape-bg);
+}
+
+.grape:hover {
+    background-color: var(--grape-sn);
+}
+
+.fire {
+    background-color: var(--fire-bg);
+}
+
+.fire:hover {
+    background-color: var(--fire-bck);
+}
+
+.rock {
+    background-color: var(--rock-bg);
+}
+
+.rock:hover {
+    background-color: var(--rock-sn);
+}
+
+.sun {
+    background-color: var(--sun-bg);
+}
+
+.sun:hover {
+    background-color: var(--sun-sn);
 }
